@@ -1,0 +1,266 @@
+.dashboard-container {
+  width: 100vw;
+  background: #2d2931;
+}
+.dashboard-content {
+  display: flex;
+}
+
+/* Chat */
+.chat-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+.chat-lists-container {
+  flex-basis: 30%;
+}
+.chat-field {
+  flex-basis: 70%;
+  position: relative;
+}
+.search-chat {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  position: relative;
+}
+.search-chat>div{
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+.search-chat input {
+  background: #686070;
+  border: none;
+  font-size: 15px;
+  color: #fff;
+  padding: 13px 20px;
+  width: 100%;
+  border-radius: 12px;
+}
+.search-chat button {
+  background: transparent;
+  border: none;
+}
+.search-chat button img {
+  background: transparent;
+  width: 30px;
+}
+.chat-list {
+  margin-top: 80px;
+}
+.single-user {
+  display: flex;
+  justify-content: space-between;
+  background: #4a4353;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 13px;
+}
+.single-user > div:nth-child(1) {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.single-user > div:nth-child(2) {
+  text-align: center;
+}
+.single-user > div:nth-child(1) > span {
+  font-size: 14px;
+}
+.single-user > div:nth-child(1) > img {
+  width: 50px;
+  height: 50px;
+}
+.single-user > div:nth-child(2) > span {
+  font-size: 12px;
+  display: block;
+}
+.single-user > div:nth-child(2) > img {
+  width: 10px;
+  height: 10px;
+}
+.single-user p {
+  font-size: 14px;
+  margin: 0;
+  margin-top: 3px;
+}
+.chat-field {
+  background: #4a4353;
+  border-radius: 12px;
+}
+.online-user {
+  display: flex;
+  gap: 30px;
+  background: #504959;
+  padding: 20px 30px;
+  border-radius: 12px;
+}
+.online-user img {
+  width: 90px;
+}
+.online-user > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.online-user > div > p {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.online-user > div > span {
+  font-size: 30px;
+}
+.chattings {
+  padding: 15px 50px;
+}
+.buddy-chats {
+  position: relative;
+  max-width: 500px;
+}
+.my-chat p,
+.buddy-chats p {
+  border-radius: 12px;
+  padding: 15px 30px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.buddy-chats p {
+  background: #676070;
+}
+.user-buddy-icon {
+  position: absolute;
+  bottom: 0;
+  left: -42px;
+}
+.user-buddy-icon img {
+  width: 35px;
+}
+.my-chat {
+  display: flex;
+  justify-content: flex-end;
+}
+.my-chat p {
+  background: #278aa5;
+}
+.send-message {
+  position: absolute;
+  bottom: 40px;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.send-message >div, .search-input>div{
+  position: relative;
+  width: 500px;
+}
+.search-input>div{
+  width: 310px;
+}
+.send-message input {
+  background: #676070;
+  font-size: 12px;
+  padding: 16px 25px;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  border-radius: 12px;
+  font-size: 16px;
+}
+.send-message >div>div{
+  position: absolute;
+  top: 11px;
+  right: -30px;
+}
+.send-message button{
+  background: transparent;
+border: none;
+}
+.send-message button img{width: 30px;}
+
+/* Profile */
+.profiles-container {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  flex-wrap: wrap;
+  gap:30px;
+}
+.img-main{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.img-cover{
+  height: 159px;
+  width: 300px;
+  object-fit: cover;
+  /* align-items: center; */
+  object-position: center;
+  border-radius: 17px;
+
+}
+.banner {
+  position: relative;
+  padding: 2px;
+
+}
+.banner img{
+  width: 100%;
+}
+.search-input{
+  position: absolute;
+  top: 30%;
+  right: 30%;
+}
+.search-input >div>div{
+  position: absolute;
+  top: 11px;
+  right: -60px;
+}
+.search-input >div>div>img{
+  width: 30px;
+}
+.search-input >div>input{
+  background: #2D2931;
+  font-size: 12px;
+  padding: 14px 25px;
+  padding-right: 60px;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  border-radius: 12px;
+  font-size: 16px;
+}
+.profiles-container>div>div{
+  background: #5C5562;
+  padding: 15px;
+  border-radius: 0px 0px 10px 10px;
+  margin-top: -15px;
+}
+.profiles-container>div>div>div:nth-child(1){
+  display: flex;
+align-items: center;
+gap: 10px;
+position: relative;
+top: -20px;
+}
+
+.add-icon{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -25px;
+}
+.profiles-container button{
+  background: transparent;
+  border:none
+}
+.profiles-container button img{
+  width: 35px;
+}

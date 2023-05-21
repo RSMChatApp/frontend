@@ -1,0 +1,45 @@
+.sidebar-container{
+    height: auto;
+    background: #36313B;
+    display: flex;
+    padding:50px 15px;
+}
+.sidebar-container ul li .active img{
+    background: #2D2931;
+    padding: 20px;  
+    border-radius: 50%;
+}
+.user{
+    text-align: center;
+}
+.user img{
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user span{
+    font-size: 14px;
+    line-height: 18px;
+    display: block;
+}
+.sidebar-icons{
+    
+}
+.sidebar-icons{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    margin-top: 100px;
+}
+.sidebar-icons li{
+    text-align: center;
+}
+.sidebar-icons img{
+    width: 50px;
+    margin: auto;
+}
+.setting-icon{
+    margin-top: 70px;
+}
