@@ -38,15 +38,15 @@ export default function Filldata() {
            localStorage.setItem("user", JSON.stringify(response.data));
 
            if( response.data){
-                setlogin(true)
-           }
+            window.location='/home'
+          }
            console.log(login);
         })
         
     }
   return (
   <> 
-  {login?<><Home data={data}/></>:<div className='login-img fill-div'>
+  <div className='login-img fill-div'>
            
         <div className="the-gray-box">
 
@@ -84,7 +84,7 @@ export default function Filldata() {
                 </form>
             </div>
         </div>
-    </div>}
+    </div>
         
   
     </>

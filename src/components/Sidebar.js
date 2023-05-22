@@ -1,21 +1,17 @@
 import React from "react";
 import profile from '../Assets/profile.png';
 import home from '../Assets/home-icon.png';
-// import setting from '../Assets/setting-icon.png';
-import user from '../Assets/user1.png';
-import { NavLink } from "react-router-dom";
 import './Sidebar.css';
 
 const Sidebar = (props) => {
-  console.log(props);
-  
+ 
 
   return (
     <div className="sidebar-container">
       <div>
         <div className="user">
-          <img src={props.data.mainImg} alt="" />
-          <span>{props.data.nickname}</span>
+          <img src={props.user.mainImg} alt="" />
+          <span>{props.user.nickname}</span>
         </div>
 
         <ul className="sidebar-icons">

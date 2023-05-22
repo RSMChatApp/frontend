@@ -12,7 +12,7 @@ import searchIcon from '../Assets/search-icon.png';
 import fillerImg from "../Assets/pexels-david-bartus-1166209.jpg"
 import { useEffect } from 'react';
 import axios from 'axios';
-const Dashboard = () => {
+const Dashboard = (props) => {
     const profiles =[
         {
             profile:profile1,
@@ -38,7 +38,7 @@ const Dashboard = () => {
         .then((response)=>{
            setUsers( response.data)
         })
-    })
+    },[])
 
 
 
@@ -61,28 +61,35 @@ const Dashboard = () => {
 
             <div className='profiles-container'>
                 {
-                    users.map((profile)=> (
-                        <div>
+                    users.filter(profile=>profile.name != props.user.name).map(profile=>{
+                        return(
+                            <div>
                             {profile.imgCover ==null &&<img src={fillerImg} className='img-cover' alt="" /> } 
                             {profile.imgCover !=null &&<img src={profile.imgCover} className='img-cover' alt="" /> } 
                             
-
+    
                             <div>
                                 <div>
                             {profile.mainImg ==null &&<img src={user} className='img-main' alt="" /> } 
                             {profile.mainImg !=null &&<img src={profile.mainImg} className='img-main'  alt="" /> }
                                     
-                                    <span>{profile.nickname}</span>
+                                <span>{profile.nickname}</span>
                                 </div>
                                 <div className="add-icon">
                                 <button><img src={add} alt="" /></button>
                                 </div>
                             </div>
                         </div>
-                    ))
-                }
+                        )
+                       
+                    })
+                
+                        }
+                    
+                 
             </div>
-        </div></>
+        </div>
+        </>
     );
 };
 

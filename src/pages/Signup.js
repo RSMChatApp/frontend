@@ -22,6 +22,7 @@ const SignUp =()=>{
             email:data.email,
             password:data.password
         }
+        
         axios.post('http://localhost:8080/addUser', userData)
         .then(function (response) {
             localStorage.setItem("user", JSON.stringify(response.data));
@@ -67,7 +68,7 @@ const SignUp =()=>{
                      onChange={(e)=>handelChange(e,'name')} 
                      value={data.name}
                      />
-                    <span></span>
+                    
                     <label>Username</label>
                 </div>
                 <div className="txt_field">
@@ -76,7 +77,7 @@ const SignUp =()=>{
                       id="email" 
                       onChange={(e)=>handelChange(e,'email')} 
                       value={data.email} />
-                    <span></span>
+                    
                     <label>Email</label>
                 </div>
                 <div className="txt_field">
@@ -85,13 +86,13 @@ const SignUp =()=>{
                     id="password" 
                     onChange={(e)=>handelChange(e,'password')} 
                     value={data.password} />
-                    <span></span>
+                    
                     <label>Password</label>
                 </div>
        
 
         <button type="submit">Register</button>
-        {/* <input type="submit" value="Login" /> */}
+       
         <div className="signup_link">
           Already have account ? <a href="/login" >Login</a>
         </div>
