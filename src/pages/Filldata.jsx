@@ -30,9 +30,8 @@ export default function Filldata() {
         userData.imgCover=data.imgCover
         userData.mainImg=data.mainImg
 
-
-
         console.log(userData);
+        
          axios.put(`http://localhost:8080/update/${userData.id}`, userData)
         .then(function (response) {
            localStorage.setItem("user", JSON.stringify(response.data));

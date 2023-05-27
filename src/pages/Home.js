@@ -5,7 +5,7 @@ import Sidebar from '../components/Sidebar'
 
 export default function Home() {
   const user=JSON.parse(localStorage.getItem("user"))
-  console.log(user);
+  
     const [page,setpage]=useState("Dashboard")
     let setPage=(page_name)=>{
         setpage(page_name);
@@ -15,7 +15,7 @@ export default function Home() {
     <>
     <Sidebar setPage={setPage} user={user}/>
     {page=="Dashboard" && <Dashboard user={user}/>}
-    {page=="Chat" && <Chat />}
+    {page=="Chat" && <Chat user={user} />}
 
     
     </>

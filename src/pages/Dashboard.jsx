@@ -13,23 +13,6 @@ import fillerImg from "../Assets/pexels-david-bartus-1166209.jpg"
 import { useEffect } from 'react';
 import axios from 'axios';
 const Dashboard = (props) => {
-    const profiles =[
-        {
-            profile:profile1,
-            icon: icon1,
-            name: "lulu peter"
-        },
-        {
-            profile:profile2,
-            icon: icon2,
-            name: "Tomas Tesla"
-        },
-        {
-            profile:profile1,
-            icon: icon1,
-            name: "Andrew mcnullty"
-        }
-    ]
 
     const [users,setUsers]=useState([])
 
@@ -39,6 +22,14 @@ const Dashboard = (props) => {
            setUsers( response.data)
         })
     },[])
+    const handleOnClick=(profile)=>{
+        //dynamic setting values
+       axios.post('http://localhost:8080/addfriend',  
+       {us1: props.user.id,
+       us2:profile.id}
+       )
+    
+    }
 
 
 
@@ -49,14 +40,8 @@ const Dashboard = (props) => {
             <div className='banner'>
                 <img src={banner} alt="" />
 
-                <div className='search-input'>
-                    <div>
-                    <input type="text" placeholder='Search '/>
-                    <div>
-                        <img src={searchIcon} alt="" />
-                    </div>
-                    </div>
-                </div>
+                
+                
             </div>
 
             <div className='profiles-container'>
@@ -76,7 +61,7 @@ const Dashboard = (props) => {
                                 <span>{profile.nickname}</span>
                                 </div>
                                 <div className="add-icon">
-                                <button><img src={add} alt="" /></button>
+                                <button onClick={()=>handleOnClick(profile)}><img src={add} alt=""  /></button>
                                 </div>
                             </div>
                         </div>
