@@ -73,7 +73,7 @@ const Login =()=>{
     <button type="submit">Login</button>
    
     <div className="signup_link">
-      Dont have an account ? <a href="/signup" >Signup</a>
+      Dont have an account ? <a href="/" >Signup</a>
     </div>
 
             
